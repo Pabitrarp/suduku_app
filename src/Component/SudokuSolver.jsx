@@ -172,6 +172,11 @@ function SudokuSolver() {
 
   const handleRefresh = () => {
     setBoard(generateNewBoard());
+    seterror({
+      rows:[],
+      cols:[],
+      matrix:[]
+     })
     setSolvedBoard(null);
   };
 
