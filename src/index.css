@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove increment and decrement buttons in Chrome, Edge, and Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove increment and decrement buttons in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Optional: Add a utility class for reuse */
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.no-arrows {
+  -moz-appearance: textfield;
+}
