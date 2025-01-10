@@ -116,36 +116,13 @@ src/
 
 We welcome contributions to improve this app!  
 
-### Steps to Contribute:  
-1. Fork this repository.  
-2. Create a feature branch:  
-   ```bash  
-   git checkout -b feature-name  
-   ```  
-3. Commit your changes:  
-   ```bash  
-   git commit -m "Add feature-name"  
-   ```  
-4. Push to your fork:  
-   ```bash  
-   git push origin feature-name  
-   ```  
-5. Create a pull request on GitHub.  
-
 ---
-
-## 📜 License  
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.  
-
----
-
 ## ✉️ Contact  
 
 For any questions or suggestions:  
 
 - **Name**: Pabitra Moharana  
-- **Email**: your-email@example.com  
+- **Email**: pabitramoharana5678@gmail.com  
 
 Enjoy solving Sudoku with this app! 🚀  
 
