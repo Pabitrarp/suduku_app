@@ -57,7 +57,7 @@ function SudokuSolver() {
   const [board, setBoard] = useState(generateNewBoard()); 
   const [solvedBoard, setSolvedBoard] = useState(null);
   const [error,seterror]=useState({rows:[],cols:[],matrix:[]});
-  
+  const [win,setwin]=useState(false)
   
   const handleInputChange = (row, col, value) => {
     const singleDigit = /^[1-9]$/;
@@ -164,6 +164,12 @@ function SudokuSolver() {
       cols:[],
       matrix:[]
      })
+    if(iswin()){
+      setwin(true);
+    }
+    else{
+      setwin(false);
+    }
   }else{
     alert("error occre");
   }
@@ -171,15 +177,36 @@ function SudokuSolver() {
 
 
   const handleRefresh = () => {
-    setBoard(generateNewBoard());
     seterror({
       rows:[],
       cols:[],
       matrix:[]
      })
+    setBoard(generateNewBoard());
     setSolvedBoard(null);
   };
+  
+ 
+  const iswin=()=>{
+    console.log("call")
+    if(board.length!=solvedBoard.length) return false;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i].length !== solvedBoard[i].length) return false;
+  
+      // Compare each element
+      for (let j = 0; j < board[i].length; j++) {
+        if (board[i][j] !== solvedBoard[i][j]) return false;
+      }
+    }
+  
+    return true; 
 
+  }
+
+  const closeModal = () => {
+    setwin(false);
+    handleRefresh();
+  };
   return (
     <div className="flex flex-col items-center p-6 bg-black min-h-screen">
       <h1 className="text-3xl font-bold mb-4 text-white">Sudoku Solver</h1>
@@ -242,6 +269,24 @@ function SudokuSolver() {
           New Puzzel
         </button>
       </div>
+      {win && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded shadow-lg">
+            <h2 className="text-2xl font-bold mb-4 text-green-600">
+              Congratulations! 🎉
+            </h2>
+            <p>You solved the puzzle!</p>
+            <button
+              onClick={closeModal}
+              className="mt-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700"
+            >
+            New Puzzle
+            </button>
+          </div>
+        </div>
+      )}
+
+
     </div>
   );
 }
