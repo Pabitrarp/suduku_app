@@ -4,7 +4,7 @@ Here’s a professional and GitHub-friendly README template for your Sudoku Solv
 
 # Sudoku Solver 🧩  
 
-A **React-based Sudoku Solver App** that lets users solve Sudoku puzzles, validate their progress, and even get hints when stuck. This app uses a backtracking algorithm to solve puzzles efficiently and is styled with Tailwind CSS for a clean, responsive design.
+A **vite-based Sudoku Solver App** that lets users solve Sudoku puzzles, validate their progress, and even get hints when stuck. This app uses a backtracking algorithm to solve puzzles efficiently and is styled with Tailwind CSS for a clean, responsive design.
 
 ---
 
@@ -51,7 +51,7 @@ A **React-based Sudoku Solver App** that lets users solve Sudoku puzzles, valida
 
 4. Open the app in your browser at:  
    ```
-   http://localhost:3000  
+   http://localhost:5173/  
    ```  
 
 ---
@@ -60,7 +60,7 @@ A **React-based Sudoku Solver App** that lets users solve Sudoku puzzles, valida
 
 ### Board Interaction  
 - **Input Numbers**: Click on a cell and type a number (1-9).  
-- **Leave Blank**: Enter `0` or clear the input.  
+ 
 
 ### Buttons  
 - **Solve**: Solves the puzzle and fills in all the cells.  
@@ -116,36 +116,13 @@ src/
 
 We welcome contributions to improve this app!  
 
-### Steps to Contribute:  
-1. Fork this repository.  
-2. Create a feature branch:  
-   ```bash  
-   git checkout -b feature-name  
-   ```  
-3. Commit your changes:  
-   ```bash  
-   git commit -m "Add feature-name"  
-   ```  
-4. Push to your fork:  
-   ```bash  
-   git push origin feature-name  
-   ```  
-5. Create a pull request on GitHub.  
-
 ---
-
-## 📜 License  
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.  
-
----
-
 ## ✉️ Contact  
 
 For any questions or suggestions:  
 
 - **Name**: Pabitra Moharana  
-- **Email**: your-email@example.com  
+- **Email**: pabitramoharana5678@gmail.com  
 
 Enjoy solving Sudoku with this app! 🚀  
 
