@@ -60,7 +60,7 @@ A **vite-based Sudoku Solver App** that lets users solve Sudoku puzzles, validat
 
 ### Board Interaction  
 - **Input Numbers**: Click on a cell and type a number (1-9).  
-- **Leave Blank**: Enter `0` or clear the input.  
+ 
 
 ### Buttons  
 - **Solve**: Solves the puzzle and fills in all the cells.  
