@@ -60,10 +60,14 @@ function SudokuSolver() {
   
   
   const handleInputChange = (row, col, value) => {
+    const singleDigit = /^[1-9]$/;
+   if(singleDigit.test(value) || value==""){
     const newBoard = board.map((r, i) =>
       r.map((c, j) => (i === row && j === col ? Number(value) || 0 : c))
     );
     setBoard(newBoard);
+   }
+    
   };
 
  
@@ -174,7 +178,7 @@ function SudokuSolver() {
   return (
     <div className="flex flex-col items-center p-6 bg-black min-h-screen">
       <h1 className="text-3xl font-bold mb-4 text-white">Sudoku Solver</h1>
-      <div className="grid grid-cols-9 gap-1">
+      <div className="grid grid-cols-9 gap-1 ">
         {board.map((row, rowIndex) =>
           row.map((cell, colIndex) => {
           const iserrorinrow=error&&error.rows.includes(rowIndex)
@@ -187,11 +191,12 @@ function SudokuSolver() {
      type="number"
      min="0"
      max="9"
+     maxLength={1}
      value={cell==0? '' :cell}
      onChange={(e) =>
        handleInputChange(rowIndex, colIndex, e.target.value)
      }
-     className={`w-12 h-12 text-center border border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+     className={`w-9 h-9 lg:w-12 lg:h-12 text-center border border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400  ${
        (rowIndex + 1) % 3 === 0 && rowIndex !== 8
          ? "border-b-4"
          : ""
