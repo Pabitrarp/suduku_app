@@ -4,7 +4,7 @@ Here’s a professional and GitHub-friendly README template for your Sudoku Solv
 
 # Sudoku Solver 🧩  
 
-A **React-based Sudoku Solver App** that lets users solve Sudoku puzzles, validate their progress, and even get hints when stuck. This app uses a backtracking algorithm to solve puzzles efficiently and is styled with Tailwind CSS for a clean, responsive design.
+A **vite-based Sudoku Solver App** that lets users solve Sudoku puzzles, validate their progress, and even get hints when stuck. This app uses a backtracking algorithm to solve puzzles efficiently and is styled with Tailwind CSS for a clean, responsive design.
 
 ---
 
@@ -51,7 +51,7 @@ A **React-based Sudoku Solver App** that lets users solve Sudoku puzzles, valida
 
 4. Open the app in your browser at:  
    ```
-   http://localhost:3000  
+   http://localhost:5173/  
    ```  
 
 ---
